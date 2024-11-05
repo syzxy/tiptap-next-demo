@@ -6,6 +6,7 @@ import Heading from "@tiptap/extension-heading";
 import Placeholder from "@tiptap/extension-placeholder";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
+import { CustomNode } from "./custom-node";
 
 const DocTitle = Node.create({
   name: "title",
@@ -49,6 +50,7 @@ const Editor = () => {
     },
     extensions: [
       StarterKit.configure({ document: false, heading: false }),
+      CustomNode,
       CustomDocument,
       DocTitle,
       CustomHeading.configure({
@@ -71,7 +73,10 @@ const Editor = () => {
         },
       }),
     ],
-    content: `<h1></h1>`,
+    content: `
+    <h1></h1>
+    <div data-type="actionable"></div>
+    `,
   });
 
   return <EditorContent editor={editor} />;
