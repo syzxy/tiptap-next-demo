@@ -8,6 +8,7 @@ import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { ContentItemMenu } from "./components/menus/ContentItemMenu";
 import { CustomNode } from "./custom-node";
+import { SlashCommand } from "./extensions/SlashCommand";
 
 const DocTitle = Node.create({
   name: "title",
@@ -51,6 +52,7 @@ const Editor = () => {
     },
     extensions: [
       StarterKit.configure({ document: false, heading: false }),
+      SlashCommand,
       CustomNode,
       CustomDocument,
       DocTitle,
