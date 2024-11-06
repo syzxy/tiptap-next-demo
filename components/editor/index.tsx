@@ -6,6 +6,7 @@ import Heading from "@tiptap/extension-heading";
 import Placeholder from "@tiptap/extension-placeholder";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
+import { ContentItemMenu } from "./components/menus/ContentItemMenu";
 import { CustomNode } from "./custom-node";
 
 const DocTitle = Node.create({
@@ -45,7 +46,7 @@ const Editor = () => {
     autofocus: true,
     editorProps: {
       attributes: {
-        class: "focus:outline-none prose max-w-prose mx-auto pt-32",
+        class: "focus:outline-none prose max-w-prose mx-auto pt-32 px-8",
       },
     },
     extensions: [
@@ -75,11 +76,17 @@ const Editor = () => {
     ],
     content: `
     <h1></h1>
-    <div data-type="actionable"></div>
     `,
   });
 
-  return <EditorContent editor={editor} />;
+  return (
+    editor && (
+      <>
+        <EditorContent editor={editor} />
+        <ContentItemMenu editor={editor} />
+      </>
+    )
+  );
 };
 
 export default Editor;
