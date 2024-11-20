@@ -1,5 +1,6 @@
 "use client";
 
+import "@/styles/index.css";
 import { EditorContent, useEditor } from "@tiptap/react";
 import { TextMenu } from "./components/menus";
 import { ContentItemMenu } from "./components/menus/ContentItemMenu";
@@ -16,6 +17,7 @@ const Editor = () => {
     extensions: ExtensionKit,
     content: `
     <h1></h1>
+    <img class="node-imageBlock" src="https://placehold.co/600x400" width="100%">
     `,
   });
 

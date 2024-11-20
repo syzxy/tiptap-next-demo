@@ -1,0 +1,16 @@
+.ProseMirror {
+  .node-imageBlock {
+    & img {
+      @apply border-2 border-transparent rounded-xl overflow-hidden;
+    }
+
+    &:hover img {
+      @apply border-2 border-neutral-100 dark:border-neutral-900;
+    }
+
+    &:has(.is-active),
+    &.has-focus img {
+      @apply border-2 border-neutral-800 dark:border-neutral-200;
+    }
+  }
+}

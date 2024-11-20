@@ -51,21 +51,6 @@
     }
   }
 
-  img.node-imageBlock {
-    & {
-      @apply border-2 border-transparent rounded-xl overflow-hidden;
-    }
-
-    &:hover {
-      @apply border-2 border-neutral-100 dark:border-neutral-900;
-    }
-
-    &:has(.is-active),
-    &.has-focus {
-      @apply border-2 border-neutral-800 dark:border-neutral-200;
-    }
-  }
-
   .node-aiWriter,
   .node-aiImage,
   .node-tableOfContentsNode {

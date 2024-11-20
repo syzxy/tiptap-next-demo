@@ -24,6 +24,6 @@ export { StarterKit } from "@tiptap/starter-kit";
 export { Document } from "./document";
 export { DocTitle } from "./document-title";
 export { Heading } from "./heading";
-export { Image } from "./Image";
+export { ImageBlock as Image } from "./Image";
 export { ImageUpload } from "./ImageUpload";
 export { SlashCommand } from "./SlashCommand";
