@@ -4,10 +4,12 @@ import {
   Color,
   DocTitle,
   Document,
-  Dropcursor,
+  Focus,
   FontFamily,
   Heading,
   Highlight,
+  Image,
+  ImageUpload,
   Link,
   Placeholder,
   SlashCommand,
@@ -22,11 +24,13 @@ import {
 
 export const ExtensionKit = [
   Document,
-  StarterKit.configure({ document: false, heading: false, history: false }),
   SlashCommand,
   DocTitle,
+  Focus,
   Subscript,
   Superscript,
+  Image,
+  ImageUpload,
   Heading.configure({
     levels: [1, 2, 3],
   }),
@@ -52,7 +56,10 @@ export const ExtensionKit = [
   }),
   StarterKit.configure({
     document: false,
-    dropcursor: false,
+    // dropcursor: false,
+    heading: false,
+    history: false,
+    gapcursor: false,
   }),
   TextStyle,
   FontFamily,
@@ -62,11 +69,10 @@ export const ExtensionKit = [
   }),
   Highlight.configure({ multicolor: true }),
   Underline,
-  SlashCommand,
-  Dropcursor.configure({
-    width: 2,
-    class: "ProseMirror-dropcursor border-black",
-  }),
+  // Dropcursor.configure({
+  //   width: 2,
+  //   class: "ProseMirror-dropcursor border-black",
+  // }),
 ];
 
 export default ExtensionKit;
