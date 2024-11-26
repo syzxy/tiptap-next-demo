@@ -19,6 +19,7 @@ export { TextAlign } from "@tiptap/extension-text-align";
 export { TextStyle } from "@tiptap/extension-text-style";
 export { Typography } from "@tiptap/extension-typography";
 export { Underline } from "@tiptap/extension-underline";
+export { Youtube } from "@tiptap/extension-youtube";
 export { StarterKit } from "@tiptap/starter-kit";
 
 export { Document } from "./document";
@@ -27,3 +28,4 @@ export { Heading } from "./heading";
 export { ImageBlock as Image } from "./Image";
 export { ImageUpload } from "./ImageUpload";
 export { SlashCommand } from "./SlashCommand";
+export { YoutubeEmbed } from "./YoutubeEmbed";

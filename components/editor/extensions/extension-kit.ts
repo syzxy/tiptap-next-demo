@@ -20,6 +20,8 @@ import {
   TaskList,
   TextStyle,
   Underline,
+  Youtube,
+  YoutubeEmbed,
 } from ".";
 
 export const ExtensionKit = [
@@ -69,6 +71,11 @@ export const ExtensionKit = [
   }),
   Highlight.configure({ multicolor: true }),
   Underline,
+  Youtube.configure({
+    nocookie: true,
+    controls: false,
+  }),
+  YoutubeEmbed,
   // Dropcursor.configure({
   //   width: 2,
   //   class: "ProseMirror-dropcursor border-black",
